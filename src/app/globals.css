@@ -2,26 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
+    --background: #fafafa;
+    --foreground: #0a0a0a;
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(0, 0, 0, 0.06);
+    --glass-shadow: rgba(0, 0, 0, 0.04);
+    --gold: #c9a96e;
+  }
+
+  .dark {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
+    --gold: #c9a96e;
+  }
+
+  * {
+    transition-property: background-color, border-color;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+  }
+
+  ::selection {
+    background-color: rgba(201, 169, 110, 0.3);
+    color: var(--foreground);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px var(--glass-shadow);
+  }
+
+  .glass-hover {
+    transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+      border-color 200ms ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .glass-hover:hover {
+      transform: scale(1.02);
+      border-color: var(--gold);
+    }
+  }
+
+  .glass-hover:active {
+    transform: scale(0.98);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 20px rgba(201, 169, 110, 0.15);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .gold-glow-hover:hover {
+      box-shadow: 0 0 30px rgba(201, 169, 110, 0.3);
+    }
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .ease-out-expo {
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .ease-in-out-expo {
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

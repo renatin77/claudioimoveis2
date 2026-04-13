@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useInView } from "framer-motion";
-import { useRef, ReactNode } from "react";
+import { useRef, useEffect, ReactNode } from "react";
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -20,36 +19,38 @@ export default function ScrollReveal({
   duration = 300,
   once = true,
 }: ScrollRevealProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once, margin: "-80px" });
-  const shouldReduceMotion = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
 
-  const directionMap = {
-    up: { y: 8, x: 0 },
-    down: { y: -8, x: 0 },
-    left: { y: 0, x: 8 },
-    right: { y: 0, x: -8 },
-  };
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
 
-  const offset = directionMap[direction];
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("is-visible");
+          if (once) observer.unobserve(el);
+        } else if (!once) {
+          el.classList.remove("is-visible");
+        }
+      },
+      { rootMargin: "-80px" }
+    );
 
-  if (shouldReduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [once]);
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      className={className}
-      initial={{ opacity: 0, ...offset }}
-      animate={isInView ? { opacity: 1, y: 0, x: 0 } : { opacity: 0, ...offset }}
-      transition={{
-        duration: duration / 1000,
-        delay: delay / 1000,
-        ease: [0.23, 1, 0.32, 1],
-      }}
+      className={`scroll-reveal sr-${direction} ${className}`}
+      style={{
+        "--sr-delay": `${delay}ms`,
+        "--sr-duration": `${duration}ms`,
+      } as React.CSSProperties}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import GlassCard from "@/components/ui/GlassCard";
 import CTAButton from "@/components/ui/CTAButton";
-import { MessageCircle, Award, Building2, Home } from "lucide-react";
+import { MessageCircle, Award, Home } from "lucide-react";
 import { broker, getWhatsAppLink } from "@/data/broker";
 
 export default function AboutBroker() {

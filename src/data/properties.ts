@@ -290,7 +290,7 @@ export const properties: Property[] = [
       "Brinquedoteca + Play Baby",
     ],
     imagens: [
-      { src: "/images/condominio-rosa/Principal.webp", alt: "Condomínio Rosa - Fachada principal" },
+      { src: "/images/condominio-rosa/6995fe284ce7e.webp", alt: "Condomínio Rosa - Fachada principal" },
       { src: "/images/condominio-rosa/6995fc02a0ac0.webp", alt: "Condomínio Rosa - Fachada" },
       { src: "/images/condominio-rosa/6995fc0dbf067.webp", alt: "Condomínio Rosa - Lazer" },
       { src: "/images/condominio-rosa/6995fc1f94f0b.webp", alt: "Condomínio Rosa - Piscina" },

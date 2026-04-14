@@ -1,9 +1,10 @@
 export const broker = {
-  nome: "Cláudio Imóveis",
+  nome: "Cláudio Corretor",
   creci: "103666",
   whatsapp: "+5521976852128",
   whatsappDisplay: "(21) 97685-2128",
-  email: "",
+  email: "claudioshema2009@gmail.com",
+  instagram: "https://www.instagram.com/claudio_corretordeimoveis",
   descricao:
     "Ajudo familias a realizar o sonho da casa propria. Empreendimentos do programa Minha Casa Minha Vida com parcelas que cabem no seu bolso, lazer completo e localizacao privilegiada no Rio de Janeiro.",
 };

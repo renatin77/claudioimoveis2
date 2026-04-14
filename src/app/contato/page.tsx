@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, Send, Home } from "lucide-react";
+import { MessageCircle, Send, Home, Mail, Instagram } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import GlassCard from "@/components/ui/GlassCard";
 import CTAButton from "@/components/ui/CTAButton";
@@ -161,27 +161,68 @@ export default function ContatoPage() {
                   <p className="text-sm text-foreground/60">
                     {broker.descricao}
                   </p>
-                </GlassCard>
-              </ScrollReveal>
+                 </GlassCard>
+               </ScrollReveal>
 
-              <ScrollReveal delay={200}>
-                <GlassCard padding="p-6" className="text-center">
-                  <MessageCircle className="w-8 h-8 text-green-600 mx-auto mb-3" />
-                  <p className="font-serif font-semibold text-foreground mb-2">
-                    Fazer Orçamento
-                  </p>
-                  <p className="text-sm text-foreground/60 mb-4">
-                    Descubra parcelas que cabem no seu bolso pelo Minha Casa Minha Vida.
-                  </p>
-                  <CTAButton
-                    href={getWhatsAppLink()}
-                    external
-                    icon={MessageCircle}
-                  >
-                    Fazer Orçamento
-                  </CTAButton>
-                </GlassCard>
-              </ScrollReveal>
+               <ScrollReveal delay={200}>
+                 <GlassCard padding="p-6">
+                   <p className="font-serif font-semibold text-foreground mb-3">
+                     Contato
+                   </p>
+                   <ul className="space-y-3">
+                     <li>
+                       <a
+                         href={`mailto:${broker.email}`}
+                         className="flex items-center gap-2 text-sm text-foreground/60 hover:text-gold transition-colors duration-200"
+                       >
+                         <Mail className="w-4 h-4" />
+                         {broker.email}
+                       </a>
+                     </li>
+                     <li>
+                       <a
+                         href={broker.instagram}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="flex items-center gap-2 text-sm text-foreground/60 hover:text-gold transition-colors duration-200"
+                       >
+                         <Instagram className="w-4 h-4" />
+                         @claudio_corretordeimoveis
+                       </a>
+                     </li>
+                     <li>
+                       <a
+                         href={getWhatsAppLink()}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="flex items-center gap-2 text-sm text-foreground/60 hover:text-gold transition-colors duration-200"
+                       >
+                         <MessageCircle className="w-4 h-4" />
+                         {broker.whatsappDisplay}
+                       </a>
+                     </li>
+                   </ul>
+                 </GlassCard>
+               </ScrollReveal>
+
+               <ScrollReveal delay={300}>
+                 <GlassCard padding="p-6" className="text-center">
+                   <MessageCircle className="w-8 h-8 text-green-600 mx-auto mb-3" />
+                   <p className="font-serif font-semibold text-foreground mb-2">
+                     Fazer Orçamento
+                   </p>
+                   <p className="text-sm text-foreground/60 mb-4">
+                     Descubra parcelas que cabem no seu bolso pelo Minha Casa Minha Vida.
+                   </p>
+                   <CTAButton
+                     href={getWhatsAppLink()}
+                     external
+                     icon={MessageCircle}
+                   >
+                     Fazer Orçamento
+                   </CTAButton>
+                 </GlassCard>
+               </ScrollReveal>
 
               <ScrollReveal delay={300}>
                 <GlassCard padding="p-6">

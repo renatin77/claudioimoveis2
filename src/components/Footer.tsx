@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Mail, Instagram } from "lucide-react";
 import { broker, getWhatsAppLink } from "@/data/broker";
 
 export default function Footer() {
@@ -65,6 +65,26 @@ export default function Footer() {
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${broker.email}`}
+                  className="flex items-center gap-2 text-sm text-foreground/60 hover:text-gold transition-colors duration-200"
+                >
+                  <Mail className="w-4 h-4" />
+                  {broker.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={broker.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-foreground/60 hover:text-gold transition-colors duration-200"
+                >
+                  <Instagram className="w-4 h-4" />
+                  @claudio_corretordeimoveis
                 </a>
               </li>
             </ul>

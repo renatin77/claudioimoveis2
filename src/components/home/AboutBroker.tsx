@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import GlassCard from "@/components/ui/GlassCard";
 import CTAButton from "@/components/ui/CTAButton";
@@ -70,14 +71,13 @@ export default function AboutBroker() {
           <ScrollReveal direction="right">
             <div className="relative">
               <GlassCard padding="p-0" className="overflow-hidden aspect-square">
-                <div className="w-full h-full bg-gradient-to-br from-gold/20 via-gold/5 to-transparent flex items-center justify-center">
-                  <div className="text-center">
-                    <Building2 className="w-16 h-16 text-gold/40 mx-auto" />
-                    <p className="mt-4 font-serif text-2xl font-bold text-foreground/20">
-                      {broker.nome}
-                    </p>
-                  </div>
-                </div>
+                <Image
+                  src="/images/corretor.webp"
+                  alt={broker.nome}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </GlassCard>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl glass gold-glow p-4 flex flex-col items-center justify-center">
                 <span className="text-2xl font-bold text-gold">7</span>

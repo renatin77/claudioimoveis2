@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, Send, Home, Mail, Instagram } from "lucide-react";
+import { MessageCircle, Send, Home, Mail } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import GlassCard from "@/components/ui/GlassCard";
 import CTAButton from "@/components/ui/CTAButton";
@@ -186,7 +186,7 @@ export default function ContatoPage() {
                          rel="noopener noreferrer"
                          className="flex items-center gap-2 text-sm text-foreground/60 hover:text-gold transition-colors duration-200"
                        >
-                         <Instagram className="w-4 h-4" />
+                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
                          @claudio_corretordeimoveis
                        </a>
                      </li>

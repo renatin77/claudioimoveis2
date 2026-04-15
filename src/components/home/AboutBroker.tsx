@@ -80,7 +80,7 @@ export default function AboutBroker() {
                 />
               </GlassCard>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl glass gold-glow p-4 flex flex-col items-center justify-center">
-                <span className="text-2xl font-bold text-gold">7</span>
+                <span className="text-2xl font-bold text-gold">10</span>
                 <span className="text-xs text-foreground/60 text-center">
                   Imóveis MCMV
                 </span>

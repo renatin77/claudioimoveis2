@@ -103,6 +103,9 @@ export default function Footer() {
                 { href: "/imovel/farol-da-guanabara", label: "Farol da Guanabara" },
                 { href: "/imovel/condominio-candeeiro", label: "Condomínio Candeeiro" },
                 { href: "/imovel/condominio-lamparina", label: "Condomínio Lamparina" },
+                { href: "/imovel/nova-norte-raizes", label: "Nova Norte - Raízes" },
+                { href: "/imovel/caminhos-da-guanabara", label: "Caminhos da Guanabara" },
+                { href: "/imovel/metropolitan-dream", label: "Metropolitan Dream" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

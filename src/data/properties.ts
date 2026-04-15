@@ -619,7 +619,18 @@ export const properties: Property[] = [
       { src: "/images/nova-norte-raizes/68af1e2b40570.webp", alt: "Nova Norte Raízes - Banheiro" },
       { src: "/images/nova-norte-raizes/68af1e33144a3.webp", alt: "Nova Norte Raízes - Lavanderia" },
     ],
-    plantas: [],
+    plantas: [
+      { src: "/images/nova-norte-raizes/Planta (1).webp", alt: "Planta - Apartamento 2 quartos" },
+      { src: "/images/nova-norte-raizes/Planta (2).webp", alt: "Planta - Apartamento 2 quartos suíte" },
+      { src: "/images/nova-norte-raizes/Planta (3).webp", alt: "Planta - Apartamento 2 quartos garden" },
+      { src: "/images/nova-norte-raizes/Planta (4).webp", alt: "Planta - Apartamento 3 quartos" },
+      { src: "/images/nova-norte-raizes/Planta (5).webp", alt: "Planta - Apartamento 3 quartos suíte" },
+      { src: "/images/nova-norte-raizes/Planta (6).webp", alt: "Planta - Detalhe cozinha" },
+      { src: "/images/nova-norte-raizes/Planta (7).webp", alt: "Planta - Detalhe banheiro" },
+      { src: "/images/nova-norte-raizes/Planta (8).webp", alt: "Planta - Detalhe varanda" },
+      { src: "/images/nova-norte-raizes/Planta (9).webp", alt: "Planta - Detalhe lavabo" },
+      { src: "/images/nova-norte-raizes/Planta (10).webp", alt: "Planta - Planta de localização" },
+    ],
     localizacao: {
       empreendimento: {
         endereco: "Rua Hannibal Porto, Lote 3, Irajá",
@@ -694,7 +705,14 @@ export const properties: Property[] = [
       { src: "/images/caminhos-da-guanabara/67c9bce7b65e7.webp", alt: "Caminhos da Guanabara - Lavanderia" },
       { src: "/images/caminhos-da-guanabara/67c9bcf4a796f.webp", alt: "Caminhos da Guanabara - Praça" },
     ],
-    plantas: [],
+    plantas: [
+      { src: "/images/caminhos-da-guanabara/Planta (1).webp", alt: "Planta - Apartamento 1 quarto" },
+      { src: "/images/caminhos-da-guanabara/Planta (2).webp", alt: "Planta - Apartamento 1 quarto varanda" },
+      { src: "/images/caminhos-da-guanabara/Planta (3).webp", alt: "Planta - Apartamento 2 quartos" },
+      { src: "/images/caminhos-da-guanabara/Planta (4).webp", alt: "Planta - Apartamento 2 quartos suíte" },
+      { src: "/images/caminhos-da-guanabara/Planta (5).webp", alt: "Planta - Detalhe cozinha" },
+      { src: "/images/caminhos-da-guanabara/Planta (6).webp", alt: "Planta - Detalhe banheiro" },
+    ],
     localizacao: {
       empreendimento: {
         endereco: "Rua Coronel PM Francisco Spargoli Rocha, Lote 1 a 4, Centro, Niterói",
@@ -773,7 +791,18 @@ export const properties: Property[] = [
       { src: "/images/metropolitan-dream/6706954ea8569.webp", alt: "Metropolitan Dream - Espaço gourmet" },
       { src: "/images/metropolitan-dream/670695b342dbd.webp", alt: "Metropolitan Dream - Solário" },
     ],
-    plantas: [],
+    plantas: [
+      { src: "/images/metropolitan-dream/Planta (1).webp", alt: "Planta - Loft" },
+      { src: "/images/metropolitan-dream/Planta (2).webp", alt: "Planta - Apartamento 1 quarto" },
+      { src: "/images/metropolitan-dream/Planta (3).webp", alt: "Planta - Apartamento 1 quarto varanda" },
+      { src: "/images/metropolitan-dream/Planta (4).webp", alt: "Planta - Apartamento 2 quartos" },
+      { src: "/images/metropolitan-dream/Planta (5).webp", alt: "Planta - Apartamento 2 quartos suíte" },
+      { src: "/images/metropolitan-dream/Planta (6).webp", alt: "Planta - Apartamento 3 quartos" },
+      { src: "/images/metropolitan-dream/Planta (7).webp", alt: "Planta - Detalhe cozinha" },
+      { src: "/images/metropolitan-dream/Planta (8).webp", alt: "Planta - Detalhe banheiro" },
+      { src: "/images/metropolitan-dream/Planta (9).webp", alt: "Planta - Detalhe varanda" },
+      { src: "/images/metropolitan-dream/Planta (10).webp", alt: "Planta - Planta de localização" },
+    ],
     localizacao: {
       empreendimento: {
         endereco: "Avenida 6, 650, Barra Olímpica",
